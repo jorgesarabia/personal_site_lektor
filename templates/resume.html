@@ -1,0 +1,106 @@
+{% extends "layout.html" %}
+{% from "macros/resume.html" import resolve_timestamp %}
+
+{% block title %}{{ this.title }} | {{super()}}{% endblock %}
+{% block body %}
+<section class="section" data-aos="zoom-in">
+    <h1 class="title">{{ this.title }}</h1>
+    <p>
+        {{ this.description}}
+    </p>
+    </div>
+</section>
+<section class="section" data-aos="fade-up">
+    {% set jobs = site.query('/resume').include_undiscoverable(True).all() %}
+    <div class="container">
+
+        <h1 class="title">Skills</h1>
+        <hr>
+        {% for entry in jobs %}
+        {% if entry.type[0] == 'Skills' %}
+
+        <div class="columns">
+            <div class="column is-2"><strong>{{entry.title}}</strong></div>
+            <div class="column">{{entry.description}}</div>
+        </div>
+
+        <hr>
+
+        {% endif %}
+        {% endfor %}
+
+    </div>
+
+    <div class="container">
+
+        <h1 class="title">Experience</h1>
+        <hr>
+        {% for entry in jobs %}
+        {% if entry.type[0] == 'Job' %}
+
+        <div class="columns">
+            <div class="column">
+                <h1 class="title is-6">
+                    {{entry.title}}
+                    at
+                    {% if entry.website %}<a href="{{ entry.website }}">{% endif %}
+                        {{ entry.name }}
+                    {% if entry.website %}</a>{% endif %}
+                </h1>
+                <h1 class="subtitle is-6">{{resolve_timestamp(entry, true)}}</h1>
+            </div>
+            <div class="column has-text-right">{{entry.place}}</div>
+        </div>
+
+
+        <div class="columns">
+            <div class="column is-2"></div>
+            <div class="column">
+                {{entry.description}}
+            </div>
+        </div>
+
+        <hr>
+
+        {% endif %}
+        {% endfor %}
+
+    </div>
+
+    <div class="container">
+
+        <h1 class="title">Education</h1>
+        <hr>
+        {% for entry in jobs %}
+        {% if entry.type[0] == 'Education' %}
+
+        <div class="columns">
+            <div class="column">
+                <h1 class="title is-6">
+                    {{entry.title}}
+                    at
+                    {% if entry.has_website %}<a href="{{ entry.website }}">{% endif %}
+                        {{ entry.name }}
+                    {% if entry.has_website %}</a>{% endif %}
+                </h1>
+                <h1 class="subtitle is-6">{{resolve_timestamp(entry, true)}}</h1>
+            </div>
+            <div class="column has-text-right">{{entry.place}}</div>
+        </div>
+
+
+        <div class="columns">
+            <div class="column is-2"></div>
+            <div class="column">
+                {{entry.description}}
+            </div>
+        </div>
+
+        <hr>
+
+        {% endif %}
+        {% endfor %}
+
+    </div>
+</section>
+{% endblock %}

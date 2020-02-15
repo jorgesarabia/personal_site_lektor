@@ -1,0 +1,30 @@
+{%- macro resolve_timestamp(entry, month=false) -%}
+  {%- if entry.start_date and entry.end_date %}
+    {%- if month %}
+      {%- if entry.start_date.month == entry.end_date.month and
+            entry.start_date.year == entry.end_date.year -%}
+        {{ entry.start_date.strftime("%b %Y") }}
+      {%- else -%}
+        {{ entry.start_date.strftime("%b %Y") }} to {{ entry.end_date.strftime("%b %Y") }}
+      {%- endif %}
+    {%- else %}
+      {%- if entry.start_date.year == entry.end_date.year -%}
+        {{ entry.start_date.year }}
+      {%- else -%}
+        {{ entry.start_date.year }} to {{ entry.end_date.year }}
+      {%- endif %}
+    {%- endif %}
+  {%- elif entry.start_date %}
+    {%- if month -%}
+      since {{ entry.start_date.strftime("%b %Y") }}
+    {%- else -%}
+      since {{ entry.start_date.year }}
+    {%- endif -%}
+  {%- elif entry.end_date %}
+    {%- if month -%}
+      until {{ entry.end_date.strftime("%b %Y") }}
+    {%- else -%}
+      until {{ entry.end_date.year }}
+    {%- endif %}
+  {%- endif %}
+{%- endmacro %}

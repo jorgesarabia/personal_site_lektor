@@ -1,0 +1,23 @@
+name: Autotall
+---
+_hidden: yes
+---
+description:
+
+It is a company that provides a SaaS focused on the sales of vehicles.
+From October 2018 to October 2019 I was in charge of the mobile
+application with Ionic 3, launching it for both Android and iOS.
+---
+end_date: 2019-10-10
+---
+place: Córdoba, ARG
+---
+start_date: 2018-10-10
+---
+title: Mobile Developer
+---
+type: Job
+---
+website: https://autotall.com.ar/
+---
+has_website: yes

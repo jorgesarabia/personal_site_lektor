@@ -1,0 +1,25 @@
+_model: cventry
+---
+description:
+
+It is a company that develops a web application for salesforce. From
+October 2018 to October 2019 my task was unit testing the frontend
+of the system, which is developed with Angular 6, unsing the Jasmine
+framework. Since October 2019 I have been developing the mobile
+application with Flutter.
+---
+start_date: 2018-10-10
+---
+title: Software Developer
+---
+type: Job
+---
+website: https://www.notedanalytics.com/
+---
+place: Boston Massachusetts, USA
+---
+_hidden: yes
+---
+name: Noted Analytics, Inc.
+---
+has_website: yes
