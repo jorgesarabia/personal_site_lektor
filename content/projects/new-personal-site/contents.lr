@@ -1,0 +1,14 @@
+name: Personal site 2.0
+---
+date: 2020-02-15 11:57:50
+---
+repository: https://github.com/jorgesarabia/personal_site_lektor
+---
+description:
+
+
+Es el nuevo proyecto de mi página personal, con un template basado en el anterior
+[proyecto](https://github.com/jorgesarabia/PersonalSite). Esta vez se agregó un Blog 
+y se utilizó [Lektor](https://www.getlektor.com/) para manejar el contenido.
+
+*HTML* - *CSS* - *Bulma* - *JavaScript* - *Lektor*
