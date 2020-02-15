@@ -8,9 +8,7 @@ image: /images/logo-bash.png
 ---
 description:
 
-
-
 Es un proyecto para automatizar algunas tareas al momento
 de realizar las pruebas unitarias en Flutter.
-
-*Bash*
+---
+tags_lang: Bash:is-black

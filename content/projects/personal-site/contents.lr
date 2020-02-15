@@ -8,8 +8,9 @@ image: /images/logo96x96.png
 ---
 description:
 
-
 Es el antigüo proyecto de mi página personal. Donde expongo algunos trabajos e información de contacto.
 Para desarrollarla, utilicé algunas herramientas como
-
-*HTML* - *CSS* - *Bulma* - *JavaScript*
+---
+tags_lang: HTML:is-black, CSS:is-info, JavaScript:is-warning
+---
+tags_tools: Bulma:is-primary

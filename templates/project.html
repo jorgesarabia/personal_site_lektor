@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% from "macros/project.html" import render_tags %}
+
+{% block title %}{{ this.name }} | {{super()}}{% endblock %}
+{% block body %}
+<section class="section" data-aos="zoom-in">
+  <div class="container">
+    <h1 class="title">{{ this.name }}</h1>
+    <p>
+      {{ this.description}}
+    </p>
+    {% for tag in this.tags_lang %}
+    {% set tag_pair = tag.split(':') %}
+    {{render_tags(tag_pair[0],tag_pair[1])}}
+    {% endfor %}
+    <br>
+    {% for tag in this.tags_tools %}
+    {% set tag_pair = tag.split(':') %}
+    {{render_tags(tag_pair[0],tag_pair[1])}}
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

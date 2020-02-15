@@ -8,8 +8,7 @@ image: /images/logo-python.png
 ---
 description:
 
-
 Pequeño script creado para automatizar tareas sobre el reporte generado
 por [Istanbul](https://istanbul.js.org/)
-
-*Python*
+---
+tags_lang: Python:is-warning

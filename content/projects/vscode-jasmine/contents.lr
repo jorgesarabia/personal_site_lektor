@@ -8,8 +8,5 @@ image: /images/logo-jasmine.png
 ---
 description:
 
-
 Fork de un [snippet](https://github.com/xabikos/vscode-jasmine) adaptado al Coding Style Guide 
 que utilizamos en [Noted Analytics](https://www.notedanalytics.com/). 
-
-*VSC extension*

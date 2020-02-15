@@ -13,4 +13,7 @@ Es el nuevo proyecto de mi página personal, con un template basado en el anteri
 [proyecto](https://github.com/jorgesarabia/PersonalSite). Esta vez se agregó un Blog 
 y se utilizó [Lektor](https://www.getlektor.com/) para manejar el contenido.
 
-*HTML* - *CSS* - *Bulma* - *JavaScript* - *Lektor*
+---
+tags_lang: Python:is-warning, HTML:is-black, CSS:is-info, JavaScript:is-warning
+---
+tags_tools: Lektor:is-danger, Bulma:is-primary

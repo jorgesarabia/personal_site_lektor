@@ -2,11 +2,31 @@
 <div class="has-text-centered box" style="margin-top: 35px;" data-aos="{{'fade-right' if left else 'fade-left' }}">
 
   <figure class="image author-image">
-    <img class="is-rounded" src="{{ project.image | url }}">
+      <a href="{{ project._id | url }}">
+        <img class="is-rounded" src="{{ project.image | url }}">
+      </a>
   </figure>
 
-  <p class="title is-3 is-spaced" style="margin-top: 30px;">{{project.name}}</p>
+  <p class="title is-3 is-spaced" style="margin-top: 30px;">
+      <a href="{{ project._id | url }}">
+        {{project.name}}
+      </a>
+  </p>
+
   {{project.description}}
+
+
+  {% for tag in project.tags_lang %}
+  {% set tag_pair = tag.split(':') %}
+  {{render_tags(tag_pair[0],tag_pair[1])}}
+  {% endfor %}
+  <br>
+  {% for tag in project.tags_tools %}
+  {% set tag_pair = tag.split(':') %}
+  {{render_tags(tag_pair[0],tag_pair[1])}}
+  {% endfor %}
+
+
   <div>
     <p class="is-size-3">
       <a href="{{project.repository}}" target="_blank">
@@ -19,4 +39,8 @@
     <time datetime="{{project.date}}">{{project.date.strftime('%d-%m-%Y - %H:%M:%S')}}</time>
   </p>
 </div>
+{% endmacro %}
+
+{% macro render_tags(lang_tool, color) %}
+<span class="tag {{ color }}"><i>{{lang_tool}}</i></span>
 {% endmacro %}

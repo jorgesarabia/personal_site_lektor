@@ -6,9 +6,8 @@ repository: https://github.com/jorgesarabia/lista_pacientes
 ---
 image: /images/logo-flutter.png
 ---
-description:
-
-
-Una app para listar el número de ficha de los pacientes de un consultorio
-
-*Flutter*
+description: Una app para listar el número de ficha de los pacientes de un consultorio
+---
+tags_lang: Dart:is-link
+---
+tags_tools: Flutter:is-info, Firebase:is-warning
