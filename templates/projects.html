@@ -1,4 +1,6 @@
 {% extends "layout.html" %}
+{% from "macros/project.html" import render_project %}
+
 {% block title %}{{ this.title }} | {{super()}}{% endblock %}
 {% block body %}
 <!-- Seccion Home -->
@@ -14,33 +16,12 @@
 
 <section class="section">
 
-
-
   <div class="tile is-ancestor">
     <div class="tile is-parent">
       <div class="tile is-child">
         {% for project in this.children %}
         {% if (loop.index%2!=0)%}
-
-        {% if (loop.index>1)%}
-        <hr>
-        {% endif %}
-
-        <div class="has-text-centered">
-          <p class="title is-3 is-spaced">{{project.name}}</p>
-          {{project.description}}
-          <div>
-            <p class="is-size-3">
-              <a href="{{project.repository}}" target="_blank">
-                <i class="fab fa-github"></i>
-              </a>
-            </p>
-          </div>
-          <p class="is-size-7">
-            Primer commit<br>
-            <time datetime="{{project.date}}">{{project.date.strftime('%d-%m-%Y - %H:%M:%S')}}</time>
-          </p>
-        </div>
+        {{ render_project(project, left=True) }}
         {% endif %}
         {% endfor %}
       </div>
@@ -49,26 +30,7 @@
       <div class="tile is-child">
         {% for project in this.children %}
         {% if (loop.index%2==0)%}
-
-        {% if (loop.index>2)%}
-        <hr>
-        {% endif %}
-
-        <div class="has-text-centered">
-          <p class="title is-3 is-spaced">{{project.name}}</p>
-          {{project.description}}
-          <div>
-            <p class="is-size-3">
-              <a href="{{project.repository}}" target="_blank">
-                <i class="fab fa-github"></i>
-              </a>
-            </p>
-          </div>
-          <p class="is-size-7">
-            Primer commit<br>
-            <time datetime="{{project.date}}">{{project.date.strftime('%d-%m-%Y - %H:%M:%S')}}</time>
-          </p>
-        </div>
+        {{ render_project(project, left=False) }}
         {% endif %}
         {% endfor %}
       </div>

@@ -1,0 +1,22 @@
+{% macro render_project(project, left) %}
+<div class="has-text-centered box" style="margin-top: 35px;" data-aos="{{'fade-right' if left else 'fade-left' }}">
+
+  <figure class="image author-image">
+    <img class="is-rounded" src="{{ project.image | url }}">
+  </figure>
+
+  <p class="title is-3 is-spaced" style="margin-top: 30px;">{{project.name}}</p>
+  {{project.description}}
+  <div>
+    <p class="is-size-3">
+      <a href="{{project.repository}}" target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+    </p>
+  </div>
+  <p class="is-size-7">
+    Primer commit<br>
+    <time datetime="{{project.date}}">{{project.date.strftime('%d-%m-%Y - %H:%M:%S')}}</time>
+  </p>
+</div>
+{% endmacro %}
