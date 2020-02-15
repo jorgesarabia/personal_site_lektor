@@ -46,7 +46,7 @@
                         <a class="navbar-item" href="{{ href|url }}">
                             {{title}}
                         </a>
-                       {% endfor %}
+                        {% endfor %}
                     </div>
                 </div>
 
@@ -60,8 +60,37 @@
 
         <!-- Footer -->
         <section class="section">
-            <div class="content has-text-centered">
-                <p> Jorge Sarabia 2020 </p>
+            <!-- Contacto -->
+            <div class="container">
+                <div class="columns">
+
+                    <div class="column has-text-centered" data-aos="flip-down">
+
+                        {% for href, icon in [
+                            ['https://github.com/jorgesarabia', 'fab fa-github'],
+                            ['https://gitlab.com/jorgesarabia', 'fab fa-gitlab'],
+                            ['https://www.linkedin.com/in/jorgesarabia/', 'fab fa-linkedin'],
+                            ['https://www.facebook.com/sarabiaingenieria/', 'fab fa-facebook'],
+                            ['https://twitter.com/sarabiajor_ge', 'fab fa-twitter'],
+                        ] %}
+
+                        <a class="is-size-3" style="margin-left: 15px;" href="{{ href|url }}" target="_blank">
+                            <span class="icon">
+                                <i class="{{icon}}"></i>
+                            </span>
+                        </a>
+
+                        {% endfor %}
+                    </div>
+
+                </div>
+
+                <div class="columns">
+                    <div class="column has-text-centered" data-aos="flip-down">
+                        <p> Jorge Sarabia 2020 </p>
+                    </div>
+                </div>
+
             </div>
         </section>
         <!-- Fin -->
