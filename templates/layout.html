@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Jorge Sarabia{% endblock %}</title>
+    <link rel="shortcut icon" type="image/png" href="{{ '/images/favicon.png'|url }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <link rel="stylesheet" href="{{ '/css/aos.css'|url }}">
+    <link rel="stylesheet" href="{{ '/css/my.css'|url }}">
+    <link rel="stylesheet" href="{{ '/static/style.css'|url }}">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+</head>
+
+<body>
+
+    <div id="app">
+        <!-- Barra de navegación -->
+        <nav class="navbar is-fixed-top has-shadow" role="navigation" aria-label="main navigation">
+            <br v-if="isBR">
+            <div class="container">
+
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="{{ '/'|url }}">
+                        <img src="{{ '/images/logo.png'|url }}" width="112" height="28">
+                    </a>
+
+                    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                        data-target="navbarBasicExample" id="burger-btn" v-on:click="isActive = !isActive"
+                        v-bind:class="{'is-active':isActive}">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+
+                <div id="navbar" class="navbar-menu" v-bind:class="{'is-active': isActive}">
+                    <div class="navbar-start">
+                        {% for href, title in [
+                            ['/', 'Home'],
+                            ['/projects', 'Projects'],
+                        ] %}
+
+                        <a class="navbar-item" href="{{ href|url }}">
+                            {{title}}
+                        </a>
+                       {% endfor %}
+                    </div>
+                </div>
+
+            </div>
+            <!--Fin container-->
+        </nav>
+        <!-- Final del navbar -->
+
+        {% block body %}
+        {% endblock %}
+
+        <!-- Footer -->
+        <section class="section">
+            <div class="content has-text-centered">
+                <p> Jorge Sarabia 2020 </p>
+            </div>
+        </section>
+        <!-- Fin -->
+
+    </div>
+
+    <script src="{{ '/aos/aos.js'|url }}"></script>
+    <script type="text/javascript">
+        let app = new Vue({
+            el: '#app',
+            data: { isActive: false, isBR: false },
+            methods: {
+                newTab: function (url) {
+                    window.open(url, "_blank");
+                }
+            }
+        });
+        AOS.init({ duration: 950, });
+    </script>
+</body>
+
+
+
+
+
+
+</html>

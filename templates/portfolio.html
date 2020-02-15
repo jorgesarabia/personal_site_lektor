@@ -1,0 +1,505 @@
+{% extends "layout.html" %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block body %}
+<!-- Seccion trabajos -->
+<section class="section" id="portfolio">
+  <div class="container">
+
+    <!-- Columna Nro 1 -->
+    <div class="columns">
+
+
+
+      <div class="column">
+        <!--Card desktop-->
+        <div class="card is-hidden-mobile" data-aos="fade-up">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-96x96">
+                  <img class="is-rounded" src="images/logo96x96.png" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="media-content">
+                <p class="title is-4">PersonalSite</p>
+                <p class="subtitle is-6">
+                  <span class="tag is-warning">HTML</span>
+                  <span class="tag is-success">CSS</span>
+                  <span class="tag is-primary">Bulma</span>
+                  <span class="tag is-info">Javascript</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="content">
+              Es mi página personal, donde expongo algunos trabajos e
+              información de contacto.
+              <br> <br>
+              <div class="has-text-centered">
+                <div>
+                  <p class="is-size-3">
+                    <a href="https://github.com/jorgesarabia/PersonalSite" target="_blank">
+                      <i class="fab fa-github"></i>
+                    </a>
+                  </p>
+                </div>
+                <p class="is-size-7">
+                  Primer commit<br>
+                  <time datetime="2019-06-25">25/06/2019 - 06:56:02 PM</time>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Card desktop-->
+        <!-- Mobile -->
+        <div class="card is-hidden-tablet" data-aos="fade-right">
+          <div class="card-content my-mobile-card-content">
+            <div class="media my-mobile-card-media">
+              <div class="media-left" @click="newTab('https://github.com/jorgesarabia/PersonalSite')">
+                <figure class="image is-64x64">
+                  <img class="is-rounded" src="images/logo64x64.png" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="media-content">
+                <p class="title is-6"> PersonalSite </p>
+                <p class="subtitle is-7">
+                  Es mi página personal, donde expongo algunos trabajos e
+                  información de contacto.
+                </p>
+              </div>
+            </div>
+            <div class="content is-centered">
+              <div class="tags">
+                <span class="tag is-warning my-mobile-tag">HTML</span>
+                <span class="tag is-success my-mobile-tag">CSS</span>
+                <span class="tag is-primary my-mobile-tag">Bulma</span>
+                <span class="tag is-info my-mobile-tag">Javascript</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--End Mobile-->
+      </div>
+      <!--End Column-->
+
+
+
+
+      <div class="column">
+        <div class="card is-hidden-mobile" data-aos="fade-up">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-96x96">
+                  <img class="is-rounded" src="images/Jasmine_logo96x96.png" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="media-content">
+                <p class="title is-4">vscode-jasmine</p>
+                <p class="subtitle is-6">
+                  <span class="tag is-warning">VSC extension</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="content">
+              Fork de un <a href="https://github.com/xabikos/vscode-jasmine" target="_blank">
+                snippet </a> adaptado al Coding Style Guide que utilizamos en
+              <a href="https://www.notedanalytics.com/" target="_blank">Noted Analytics</a>.
+              <br> <br>
+              <div class="has-text-centered">
+                <div>
+                  <p class="is-size-3">
+                    <a href="https://github.com/jorgesarabia/vscode-jasmine" target="_blank">
+                      <i class="fab fa-github"></i>
+                    </a>
+                  </p>
+                </div>
+                <p class="is-size-7">
+                  Primer commit<br>
+                  <time datetime="2019-05-13">13/05/2019 - 03:21:21 PM</time>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Mobile -->
+        <div class="card is-hidden-tablet" data-aos="fade-right">
+          <div class="card-content my-mobile-card-content">
+            <div class="media my-mobile-card-media">
+              <div class="media-left" @click="newTab('https://github.com/jorgesarabia/vscode-jasmine')">
+                <figure class="image is-64x64">
+                  <img class="is-rounded" src="images/Jasmine_logo64x64.png" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="media-content">
+                <p class="title is-6"> vscode-jasmine </p>
+                <p class="subtitle is-7">
+                  Fork de un <a href="https://github.com/xabikos/vscode-jasmine" target="_blank">
+                    snippet </a> adaptado al Coding Style Guide que utilizamos en
+                  <a href="https://www.notedanalytics.com/" target="_blank">Noted
+                    Analytics</a>
+                </p>
+              </div>
+            </div>
+            <div class="content is-centered">
+              <div class="tags">
+                <span class="tag is-warning my-mobile-tag">VSC extension</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--End Mobile-->
+      </div>
+      <!--End Column-->
+
+
+
+
+
+      <div class="column">
+        <div class="card is-hidden-mobile" data-aos="fade-up">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-96x96">
+                  <img class="is-rounded" src="images/Python_logo96x96.png" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="media-content">
+                <p class="title is-4">clean-my-report</p>
+                <p class="subtitle is-6">
+                  <span class="tag is-danger">Python</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="content">
+              Pequeño script creado para automatizar tareas sobre el reporte generado
+              por <a href="https://istanbul.js.org/" target="_blank">Istanbul</a>.
+              <br>
+              <div class="has-text-centered">
+                <div>
+                  <p class="is-size-3">
+                    <a href="https://github.com/jorgesarabia/clean-my-report" target="_blank">
+                      <i class="fab fa-github"></i>
+                    </a>
+                  </p>
+                </div>
+                <p class="is-size-7">
+                  Primer commit<br>
+                  <time datetime="2019-07-10">10/07/2019 - 16:54:44 PM</time>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Mobile -->
+        <div class="card is-hidden-tablet" data-aos="fade-right">
+          <div class="card-content my-mobile-card-content">
+            <div class="media my-mobile-card-media">
+              <div class="media-left" @click="newTab('https://github.com/jorgesarabia/clean-my-report')">
+                <figure class="image is-64x64">
+                  <img class="is-rounded" src="images/Python_logo64x64.png" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="media-content">
+                <p class="title is-6">clean-my-report</p>
+                <p class="subtitle is-7">
+                  Pequeño script creado para automatizar tareas sobre el reporte generado
+                  por <a href="https://istanbul.js.org/" target="_blank">Istanbul</a>.
+                </p>
+              </div>
+            </div>
+            <div class="content is-centered">
+              <div class="tags">
+                <span class="tag is-danger my-mobile-tag">Python</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--End Mobile-->
+      </div>
+      <!--End Column-->
+
+
+
+
+
+
+    </div>
+    <!--End columns nro 1-->
+
+    <!-- Columna Nro 2 -->
+    <div class="columns">
+
+
+
+      <div class="column">
+        <!--Card desktop-->
+        <div class="card is-hidden-mobile" data-aos="fade-up">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-96x96">
+                  <img class="is-rounded" src="images/logo-bash.png" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="media-content">
+                <p class="title is-4">flutter_coverage</p>
+                <p class="subtitle is-6">
+                  <span class="tag is-black">Bash</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="content">
+              Es un proyecto para automatizar algunas tareas al momento
+              de realizar las pruebas unitarias en Flutter.
+              <br>
+              <div class="has-text-centered">
+                <div>
+                  <p class="is-size-3">
+                    <a href="https://github.com/jorgesarabia/flutter_coverage" target="_blank">
+                      <i class="fab fa-github"></i>
+                    </a>
+                  </p>
+                </div>
+                <p class="is-size-7">
+                  Primer commit<br>
+                  <time datetime="2019-11-19">19/11/2019 - 03:53:41 PM</time>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Card desktop-->
+        <!-- Mobile -->
+        <div class="card is-hidden-tablet" data-aos="fade-right">
+          <div class="card-content my-mobile-card-content">
+            <div class="media my-mobile-card-media">
+              <div class="media-left" @click="newTab('https://github.com/jorgesarabia/flutter_coverage')">
+                <figure class="image is-64x64">
+                  <img class="is-rounded" src="images/logo-bash.png" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="media-content">
+                <p class="title is-6"> flutter_coverage </p>
+                <p class="subtitle is-7">
+                  Es un proyecto para automatizar algunas tareas al momento
+                  de realizar las pruebas unitarias en Flutter.
+                </p>
+              </div>
+            </div>
+            <div class="content is-centered">
+              <div class="tags">
+                <span class="tag  my-mobile-tag is-black">Bash</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--End Mobile-->
+      </div>
+      <!--End Column-->
+
+
+
+
+      <div class="column">
+        <div class="card is-hidden-mobile" data-aos="fade-up">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-96x96">
+                  <img class="is-rounded" src="images/logo-flutter.png" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="media-content">
+                <p class="title is-4">lista_pacientes</p>
+                <p class="subtitle is-6">
+                  <span class="tag is-link">Flutter</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="content">
+              Una app para listar el número de ficha de los pacientes en un consultorio
+              <br> <br>
+              <div class="has-text-centered">
+                <div>
+                  <p class="is-size-3">
+                    <a href="https://github.com/jorgesarabia/lista_pacientes" target="_blank">
+                      <i class="fab fa-github"></i>
+                    </a>
+                  </p>
+                </div>
+                <p class="is-size-7">
+                  Primer commit<br>
+                  <time datetime="2019-10-29">29/10/2019 - 09:44:56 AM</time>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Mobile -->
+        <div class="card is-hidden-tablet" data-aos="fade-right">
+          <div class="card-content my-mobile-card-content">
+            <div class="media my-mobile-card-media">
+              <div class="media-left" @click="newTab('https://github.com/jorgesarabia/lista_pacientes')">
+                <figure class="image is-64x64">
+                  <img class="is-rounded" src="images/logo-flutter.png" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="media-content">
+                <p class="title is-6"> lista_pacientes </p>
+                <p class="subtitle is-7">
+                  Una app para listar el número de ficha de los pacientes en un consultorio
+                </p>
+              </div>
+            </div>
+            <div class="content is-centered">
+              <div class="tags">
+                <span class="tag  my-mobile-tag is-link">Flutter</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--End Mobile-->
+      </div>
+      <!--End Column-->
+
+
+
+
+
+      <div class="column">
+        <!--div class="card is-hidden-mobile" data-aos="fade-up">
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <figure class="image is-96x96">
+                                            <img class="is-rounded" src="images/Python_logo96x96.png"
+                                                alt="Placeholder image">
+                                        </figure>
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-4">clean-my-report</p>
+                                        <p class="subtitle is-6">
+                                            <span class="tag is-danger">Python</span>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="content">
+                                    Pequeño script creado para automatizar tareas sobre el reporte generado
+                                    por <a href="https://istanbul.js.org/" target="_blank">Istanbul</a>.
+                                    <br>
+                                    <div class="has-text-centered">
+                                        <div>
+                                            <p class="is-size-3">
+                                                <a href="https://github.com/jorgesarabia/clean-my-report"
+                                                    target="_blank">
+                                                    <i class="fab fa-github"></i>
+                                                </a>
+                                            </p>
+                                        </div>
+                                        <p class="is-size-7">
+                                            Primer commit<br>
+                                            <time datetime="2019-07-10">10/07/2019 - 16:54:44 PM</time>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div-->
+        <!-- Mobile -->
+        <!--div class="card is-hidden-tablet" data-aos="fade-right">
+                            <div class="card-content my-mobile-card-content">
+                                <div class="media my-mobile-card-media">
+                                    <div class="media-left"
+                                        @click="newTab('https://github.com/jorgesarabia/clean-my-report')">
+                                        <figure class="image is-64x64">
+                                            <img class="is-rounded" src="images/Python_logo64x64.png"
+                                                alt="Placeholder image">
+                                        </figure>
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-6">clean-my-report</p>
+                                        <p class="subtitle is-7">
+                                            Pequeño script creado para automatizar tareas sobre el reporte generado
+                                            por <a href="https://istanbul.js.org/" target="_blank">Istanbul</a>.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="content is-centered">
+                                    <div class="tags">
+                                        <span class="tag is-danger my-mobile-tag">Python</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div-->
+        <!--End Mobile-->
+      </div>
+      <!--End Column-->
+
+
+
+
+
+
+    </div>
+    <!--End columns nro 1-->
+
+  </div>
+  <!--End container-->
+
+</section> <!-- Fin seccion trabajos -->
+
+<!-- Contacto -->
+<section class="section is-medium" id="contact">
+  <div class="container">
+    <div class="columns">
+      <div class="column has-text-centered" data-aos="flip-down">
+        <a class="button is-large" href="https://github.com/jorgesarabia" target="_blank">
+          <span class="icon">
+            <i class="fab fa-github"></i>
+          </span>
+          <span>GitHub</span>
+        </a>
+      </div>
+
+      <div class="column has-text-centered" data-aos="flip-down">
+        <a class="button is-large" href="https://www.linkedin.com/in/jorgesarabia/" target="_blank">
+          <span class="icon">
+            <i class="fab fa-linkedin"></i>
+          </span>
+          <span>LinkedIn</span>
+        </a>
+      </div>
+
+      <div class="column has-text-centered" data-aos="flip-down">
+        <a class="button is-large" href="https://www.facebook.com/sarabiaingenieria/" target="_blank">
+          <span class="icon">
+            <i class="fab fa-facebook"></i>
+          </span>
+          <span>Facebook</span>
+        </a>
+      </div>
+
+      <div class="column has-text-centered" data-aos="flip-down">
+        <a class="button is-large" href="https://twitter.com/sarabiajor_ge" target="_blank">
+          <span class="icon">
+            <i class="fab fa-twitter"></i>
+          </span>
+          <span>Twitter</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- Fin seccion Contacto -->
+
+<h2>{{ this.title }}</h2>
+{{ this.body }}
+{% endblock %}

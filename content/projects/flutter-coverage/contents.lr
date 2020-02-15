@@ -1,0 +1,14 @@
+name: Flutter coverage
+---
+date: 2019-11-19 15:53:41
+---
+repository: https://github.com/jorgesarabia/flutter_coverage
+---
+description:
+
+
+
+Es un proyecto para automatizar algunas tareas al momento
+de realizar las pruebas unitarias en Flutter.
+
+*Bash*

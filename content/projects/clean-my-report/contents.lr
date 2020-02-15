@@ -1,0 +1,13 @@
+name: Clean my report
+---
+date: 2019-07-10 16:54:44
+---
+repository: https://github.com/jorgesarabia/clean-my-report
+---
+description:
+
+
+Pequeño script creado para automatizar tareas sobre el reporte generado
+por [Istanbul](https://istanbul.js.org/)
+
+*Python*

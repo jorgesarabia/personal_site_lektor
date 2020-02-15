@@ -1,0 +1,13 @@
+name: VSCode Jasmine
+---
+date: 2019-05-13 15:21:21
+---
+repository: https://github.com/jorgesarabia/vscode-jasmine
+---
+description:
+
+
+Fork de un [snippet](https://github.com/xabikos/vscode-jasmine) adaptado al Coding Style Guide 
+que utilizamos en [Noted Analytics](https://www.notedanalytics.com/). 
+
+*VSC extension*

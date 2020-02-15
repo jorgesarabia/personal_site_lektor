@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+<!-- {% block title %}{{ this.title }}{% endblock %} -->
+{% block body %}
+<!-- Seccion Home -->
+<section class="section" data-aos="zoom-in" id="inicio">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-one-quarter">
+        <figure class="image imagen">
+          <img class="is-rounded" src="{{ '/images/mi_foto480.png'|url }}">
+        </figure>
+      </div>
+      <div class="column">
+        <h1 class="title">
+          {{ this.title }}
+        </h1>
+        <p class="subtitle">
+          {{ this.subtitle }}
+        </p>
+        <p>
+          {{ this.body }}
+        </p>
+        <br>
+        <p class="subtitle is-6 is-hidden-mobile">
+          <span class="tag is-info">JavaScript</span>
+          <span class="tag is-warning">Python</span>
+          <span class="tag is-danger">Kotlin</span>
+          <span class="tag is-link">MySQL</span>
+          <span class="tag is-black">HTML</span>
+          <span class="tag is-info">CSS</span>
+          <!-- <span class="tag is-dark">LaTex</span> -->
+          <!-- <span class="tag is-primary">PHP</span> -->
+          <!-- <span class="tag is-primary">Java</span> -->
+          <!-- <span class="tag is-success">C</span> -->
+          <br>
+          <span class="tag is-info">Ionic</span>
+          <span class="tag is-primary">Jasmine</span>
+          <span class="tag is-link">Angular</span>
+          <span class="tag is-danger">Flask</span>
+          <span class="tag is-primary">Bulma</span>
+          <span class="tag is-link">Flutter</span>
+          <!-- <span class="tag is-success">Laravel</span> -->
+        </p>
+        <p class="subtitle is-6 is-hidden-tablet">
+          <span class="tag is-info my-mobile-tag">JavaScript</span>
+          <span class="tag is-warning my-mobile-tag">Python</span>
+          <span class="tag is-danger my-mobile-tag">Kotlin</span>
+          <span class="tag is-link my-mobile-tag">MySQL</span>
+          <span class="tag is-black my-mobile-tag">HTML</span>
+          <span class="tag is-info my-mobile-tag">CSS</span>
+          <!-- <span class="tag is-dark my-mobile-tag">LaTex</span> -->
+          <!-- <span class="tag is-primary my-mobile-tag">PHP</span> -->
+          <!-- <span class="tag is-primary my-mobile-tag">Java</span> -->
+          <!-- <span class="tag is-success my-mobile-tag">C</span> -->
+          <br>
+          <span class="tag is-info my-mobile-tag">Ionic</span>
+          <span class="tag is-primary my-mobile-tag">Jasmine</span>
+          <span class="tag is-link my-mobile-tag">Angular</span>
+          <span class="tag is-danger my-mobile-tag">Flask</span>
+          <span class="tag is-primary my-mobile-tag">Bulma</span>
+          <!-- <span class="tag is-link my-mobile-tag>Boostrap</span> -->
+          <!-- <span class="tag is-success my-mobile-tag">Laravel</span> -->
+        </p>
+      </div>
+    </div>
+    <!--End columns-->
+  </div>
+  <!--End container-->
+</section>
+<!-- Fin seccion Home -->
+
+{% endblock %}
