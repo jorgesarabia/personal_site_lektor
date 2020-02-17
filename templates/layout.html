@@ -44,12 +44,36 @@
                             ['/resume', 'Resume'],
                         ] %}
 
-                        <a class="navbar-item" href="{{ href|url }}">
+                        <a class="navbar-item" href="{{ href | url }}">
                             {{title}}
                         </a>
                         {% endfor %}
+
+
+
+
                     </div>
                 </div>
+                <!--div class="navbar-end">
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            {% if this.alt == 'en' %}
+                            <img src="https://www.countryflags.io/us/flat/64.png">
+                            {% else %}
+                            <img src="https://www.countryflags.io/es/flat/64.png">
+                            {% endif %}
+                        </a>
+
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item" href="{{ '/es/' }}">
+                                <img src="https://www.countryflags.io/es/flat/64.png">
+                            </a>
+                            <a class="navbar-item" href="{{ '/en/' }}">
+                                <img src="https://www.countryflags.io/us/flat/64.png">
+                            </a>
+                        </div>
+                    </div>
+                </div-->
 
             </div>
             <!--Fin container-->
@@ -101,6 +125,7 @@
 
     <script src="{{ '/aos/aos.js'|url }}"></script>
     <script type="text/javascript">
+
         let app = new Vue({
             el: '#app',
             data: { isActive: false, isBR: false },
@@ -108,15 +133,12 @@
                 newTab: function (url) {
                     window.open(url, "_blank");
                 }
-            }
+            },
         });
+
         AOS.init({ duration: 950, });
     </script>
 </body>
-
-
-
-
 
 
 </html>
