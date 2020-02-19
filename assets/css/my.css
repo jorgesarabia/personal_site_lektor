@@ -1,36 +1,44 @@
 .tag:not(body) {
-    margin-top: 5px;
+  margin-top: 5px;
 }
 
 #inicio {
-    padding-top: 5rem;
+  padding-top: 5rem;
 }
 
 .my-mobile-tag {
-    margin-top: 5px !important;
-    font-size: 0.6rem !important;
+  margin-top: 5px !important;
+  font-size: 0.6rem !important;
 }
-.my-mobile-card-content{
-    padding-top: 8px;
-    padding-right: 3px;
-    padding-bottom: 5px;
-    padding-left: 5px;
+.my-mobile-card-content {
+  padding-top: 8px;
+  padding-right: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
 }
-.my-mobile-card-media{
-    margin-bottom:0.5rem !important;
+.my-mobile-card-media {
+  margin-bottom: 0.5rem !important;
 }
 
 .author-image {
-    position: absolute;
-    top: -30px;
-    left: 50%;
-    width: 60px;
-    height: 60px;
-    margin-left: -30px;
-    /* border: 3px solid #ccc; */
-    /* border-radius: 50%; */
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  margin-left: -30px;
+  /* border: 3px solid #ccc; */
+  /* border-radius: 50%; */
 }
 
 .cv-header {
-    padding: 15px;
+  padding: 15px;
+}
+
+.hero-body {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Plum_trees_Kitano_Tenmangu.jpg/1200px-Plum_trees_Kitano_Tenmangu.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 500px;
 }

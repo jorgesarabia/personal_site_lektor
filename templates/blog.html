@@ -1,11 +1,37 @@
-{% extends "layout.html" %}
-{% from "macros/blog.html" import render_blog_post %}
-{% from "macros/pagination.html" import render_pagination %}
-{% block title %}{{ this.title }}{% endblock %}
-{% block body %}
-  {% for child in this.pagination.items %}
-    {{ render_blog_post(child, from_index=true) }}
-  {% endfor %}
+{% extends "layout.html" %} 
 
-  {{ render_pagination(this.pagination) }}
+{% from "macros/blog.html" import render_project_list, render_category_nav %}
+
+{% block title %} {{ this.title }} | {{super()}} {% endblock %} 
+
+{% block body %}
+<section class="hero is-info is-medium is-bold">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title">
+        {{this.description}}
+      </h1>
+    </div>
+  </div>
+</section>
+
+<div class="columns">
+  <div class="column">
+    <h3>Categories</h3>
+    {{ render_category_nav(active=none) }}
+  </div>
+  <div class="column is-three-quarters">
+    <div class="columns">
+      <div class="column">
+      </div>
+      <div class="column">
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <h3>Other Posts</h3>
+    {{ render_project_list(this.children) }}
+  </div>
+</div>
+
 {% endblock %}

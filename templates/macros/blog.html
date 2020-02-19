@@ -18,3 +18,23 @@
   {{ post.body }}
   </div>
 {% endmacro %}
+
+{% macro render_category_nav(active=none) %}
+
+  {% set categories = site.query('/blog-categories') %}
+  <ul>
+  {% for category in categories %}
+    <li{% if category._id == active %} class="active"{% endif %}>
+      <a href="{{ category|url }}">{{ category.name }}</a>
+    </li>
+  {% endfor %}
+  </ul>
+{% endmacro %}
+
+{% macro render_project_list(blogs) %}
+  <ul>
+  {% for blog in blogs %}
+    <li><a href="{{ blog|url }}">{{ blog.title}}</a></li>
+  {% endfor %}
+  </ul>
+{% endmacro %}
