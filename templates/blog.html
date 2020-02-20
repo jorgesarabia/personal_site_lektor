@@ -1,6 +1,7 @@
 {% extends "layout.html" %} 
 
 {% from "macros/blog.html" import render_project_list, render_category_nav %}
+{% from "macros/blog.html" import render_blog_post %}
 
 {% block title %} {{ this.title }} | {{super()}} {% endblock %} 
 
@@ -8,28 +9,32 @@
 <section class="hero is-info is-medium is-bold">
   <div class="hero-body">
     <div class="container has-text-centered">
-      <h1 class="title">
-        {{this.description}}
-      </h1>
     </div>
   </div>
 </section>
 
 <div class="columns">
-  <div class="column">
-    <h3>Categories</h3>
+  <div class="column has-text-left box">
+    <strong class="is-size-6">Categories</strong>
     {{ render_category_nav(active=none) }}
   </div>
   <div class="column is-three-quarters">
+    {% for blog in this.children %}
+    {% if not loop.last %}
+    <hr>
     <div class="columns">
       <div class="column">
+        {{ render_blog_post(blog) }}
       </div>
       <div class="column">
+        {{ render_blog_post(loop.nextitem) }}
       </div>
     </div>
+    {% endif %}
+    {% endfor %}
   </div>
-  <div class="column">
-    <h3>Other Posts</h3>
+  <div class="column has-text-left box">
+    <strong class="is-size-6">Other Posts</strong>
     {{ render_project_list(this.children) }}
   </div>
 </div>

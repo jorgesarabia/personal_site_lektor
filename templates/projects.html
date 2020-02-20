@@ -29,8 +29,11 @@
       </div>
       <div class="tile is-parent">
         <div class="tile is-child">
-          {% for project in this.children %} {% if (loop.index%2==0)%} {{
-          render_project(project, left=False) }} {% endif %} {% endfor %}
+          {% for project in this.children %}
+          {% if (loop.index%2==0)%} 
+          {{ render_project(project, left=False) }}
+          {% endif %}
+          {% endfor %}
         </div>
       </div>
     </div>
