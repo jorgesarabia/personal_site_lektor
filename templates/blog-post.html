@@ -1,6 +1,42 @@
-{% extends "layout.html" %}
-{% from "macros/blog.html" import render_blog_post %}
-{% block title %}{{ this.title }}{% endblock %}
+{% extends "layout.html" %} 
+{% block title %} {{ this.title }} | {{super()}} {% endblock %} 
+
 {% block body %}
-  {{ render_blog_post(this) }}
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column has-text-left">
+      </div>
+
+      <div class="column is-three-quarters">
+
+        <div class="media">
+          <div class="media-left">
+            <figure class="image is-48x48">
+              <img class="is-rounded" src="{{ '/images/mi_foto480.png'|url }}" alt="Placeholder image">
+            </figure>
+          </div>
+          <div class="media-content">
+            <p class="title is-4">{{this.author}}</p>
+            <p class="subtitle is-6">On {{ this.pub_date|datetimeformat('MMMM dd, YYYY') }}</p>
+          </div>
+        </div>
+        
+        <h1 class="title is-1 is-family-monospace">{{this.title}}</h1>
+        <div class="message-body">
+          <h2 class="subtitle is-family-code has-text-grey is-italic">{{this.description}}</h2>
+        </div>
+
+        <div class="section">
+          {{this.body}}
+        </div>
+
+      </div>
+
+      <div class="column has-text-left">
+      </div>
+
+    </div>
+  </div>
+</section>
 {% endblock %}

@@ -2,10 +2,7 @@
 <h2 class="subtitle is-5 has-text-grey"><p>{{ post.pub_date|datetimeformat('MMMM dd, YYYY') }}</h2>
 <h1 class="title is-3 has-text-black">{{post.title}}</h1>
 <p class="has-text-dark">
-  {{"Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-  Nemo, facilis commodi eius, natus quasi magnam amet nihil laudantium 
-  itaque explicabo sed beatae vero cumque repudiandae ex. 
-  Repellat deserunt officia incidunt!"[0:200]}}...
+  {{post.description}}
 </p>
 <a href="{{ post|url }}">Read More...</a>
 {% endmacro %}

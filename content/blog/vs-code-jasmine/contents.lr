@@ -1,0 +1,422 @@
+title: VS Code Jasmine
+---
+author: Jorge Sarabia
+---
+pub_date: 2020-02-20
+---
+description: Es una extensión para el Visual Studio Code. Contiene un code snippet para el framework Jasmine, adaptado a la guia de estilos de [Noted Analytics](https://www.notedanalytics.com/)
+---
+body:
+
+This extension is based on [xabios's](https://github.com/xabikos) [JasmineSnippets](https://github.com/xabikos/vscode-jasmine) work .
+I have modified it according to the Coding Style Guide that we use at work. I have also added some functions that I use very often.
+
+<br>
+
+<h2 class="title is-5">What is different?</h2>
+
+<div class="content">
+  <ol type="i">
+    <li>Single-quote is replaced by double-quote.</li>
+    <li>I replaced this function:</li>
+    <br>
+    
+    <table class="table is-narrow is-bordered">
+        <thead>
+            <tr>
+                <th>Trigger</th>
+                <th>Content</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>desc→</code></td>
+                <td>describe method with nested it</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <br>
+    
+    <li>I added these functions:</li>
+    <br>
+    
+    <table class="table is-narrow is-bordered">
+        <thead>
+            <tr>
+                <th>Trigger</th>
+                <th>Content</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>descb→</code></td>
+                <td>describe method with nested it and beforeEach</td>
+            </tr>
+            <tr>
+                <td><code>descfull→</code></td>
+                <td>describe method with nested it, beforeEach and afterEach</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <br>
+    <li>And adding an <code>‘a’</code>:</li>
+    <br>
+    <table class="table is-narrow is-bordered">
+        <thead>
+            <tr>
+                <th>Trigger</th>
+                <th>Content</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>ita→</code></td>
+                <td>async it method</td>
+            </tr>
+            <tr>
+                <td><code>desca→</code></td>
+                <td>describe method with nested async it</td>
+            </tr>
+            <tr>
+                <td><code>descba→</code></td>
+                <td>describe method with nested async it and beforeEach</td>
+            </tr>
+            <tr>
+                <td><code>descfulla→</code></td>
+                <td>describe method with nested async it, beforeEach and afterEach</td>
+            </tr>
+        </tbody>
+    </table>
+  </ol>
+</div>
+
+<h2 class="title is-5">Installation</h2>
+This package isn’t in Visual Studio Marketplace. The easiest way to install it is with vsce.
+To install in an Unix environment (tested with Debian):
+
+<div class="content">
+  <ol type="1">
+    <li>Clone the project:</li>
+    <br>
+    <code>git clone https://github.com/jorgesarabia/vscode-jasmine.git</code>
+    <br>
+    <br>
+    <li>Install vsce globally with npm:</li>
+    <br>
+    <code>npm install -g vsce</code>
+    <br>
+    <br>
+    <li>Package:</li>
+    <br>
+    <code>cd vscode-jasmine</code>
+    <br>
+    <code>vsce package</code>
+    <br>
+    <br>
+    <li>Install it:</li>
+    <br>
+    <code>code --install-extension JasmineSnippets-0.1.0.vsix</code>
+  </ol>
+</div>
+
+
+<h2 class="title is-5">Supported languages (file extensions)</h2>
+
+<div class="content">
+  <ol type="I">
+    <li>
+        JavaScript (.js)
+    </li>
+    <li>
+        TypeScript (.ts)
+    </li>
+  </ol>
+</div>
+
+<h2 class="title is-5">Snippets</h2>
+
+Below is a list of all available snippets and the triggers of each one. The **→** means the `TAB` key.
+
+<br>
+<h2 class="title is-5">Specs</h2>
+<br>
+<div class="container">
+    <table class="table is-narrow is-bordered">
+        <thead>
+            <tr>
+                <th>Trigger</th>
+                <th>Content</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>xdesc→</code></td>
+                <td>xdescribe method</td>
+            </tr>
+            <tr>
+                <td><code>fdesc→</code></td>
+                <td>fdescribe method</td>
+            </tr>
+            <tr>
+                <td><code>it→</code></td>
+                <td>it method</td>
+            </tr>
+            <tr>
+                <td><code>xit→</code></td>
+                <td>xit method</td>
+            </tr>
+            <tr>
+                <td><code>fit→</code></td>
+                <td>fit method</td>
+            </tr>
+            <tr>
+                <td><code>ae→</code></td>
+                <td>after each method</td>
+            </tr>
+            <tr>
+                <td><code>be→</code></td>
+                <td>before each method</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<br>
+
+
+<h2 class="title is-5">Expectations</h2>
+<br>
+<div class="container">
+    <table class="table is-narrow is-bordered">
+        <thead>
+            <tr>
+                <th>Trigger</th>
+                <th>Content</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>exp→</code></td>
+                <td>expect</td>
+            </tr>
+            <tr>
+                <td><code>tb→</code></td>
+                <td>expect().toBe</td>
+            </tr>
+            <tr>
+                <td><code>tbct→</code></td>
+                <td>expect().toBeCloseTo</td>
+            </tr>
+            <tr>
+                <td><code>tbd→</code></td>
+                <td>expect().toBeDefined</td>
+            </tr>
+            <tr>
+                <td><code>tbf→</code></td>
+                <td>expect().toBeFalsy</td>
+            </tr>
+            <tr>
+                <td><code>tbgt→</code></td>
+                <td>expect().toBeGreaterThan</td>
+            </tr>
+            <tr>
+                <td><code>tblt→</code></td>
+                <td>expect().toBeLessThan</td>
+            </tr>
+            <tr>
+                <td><code>tbn→</code></td>
+                <td>expect().toBeNull</td>
+            </tr>
+            <tr>
+                <td><code>tbt→</code></td>
+                <td>expect().toBeTruthy</td>
+            </tr>
+            <tr>
+                <td><code>tbu→</code></td>
+                <td>expect().toBeUndefined</td>
+            </tr>
+            <tr>
+                <td><code>tc→</code></td>
+                <td>expect().toContain</td>
+            </tr>
+            <tr>
+                <td><code>te→</code></td>
+                <td>expect().toEqual</td>
+            </tr>
+            <tr>
+                <td><code>thbc→</code></td>
+                <td>expect().toHaveBeenCalled</td>
+            </tr>
+            <tr>
+                <td><code>thbcw→</code></td>
+                <td>expect().toHaveBeenCalledWith</td>
+            </tr>
+            <tr>
+                <td><code>tm→</code></td>
+                <td>expect().toMatch</td>
+            </tr>
+            <tr>
+                <td><code>tt→</code></td>
+                <td>expect().toThrow</td>
+            </tr>
+            <tr>
+                <td><code>tte→</code></td>
+                <td>expect().toThrowError</td>
+            </tr>
+            <tr>
+                <td><code>nb→</code></td>
+                <td>expect().not.toBe</td>
+            </tr>
+            <tr>
+                <td><code>nct→</code></td>
+                <td>expect().not.toBeCloseTo</td>
+            </tr>
+            <tr>
+                <td><code>nd→</code></td>
+                <td>expect().not.toBeDefined</td>
+            </tr>
+            <tr>
+                <td><code>nf→</code></td>
+                <td>expect().not.toBeFalsy</td>
+            </tr>
+            <tr>
+                <td><code>ngt→</code></td>
+                <td>expect().not.toBeGreaterThan</td>
+            </tr>
+            <tr>
+                <td><code>nlt→</code></td>
+                <td>expect().not.toBeLessThan</td>
+            </tr>
+            <tr>
+                <td><code>nn→</code></td>
+                <td>expect().not.toBeNull</td>
+            </tr>
+            <tr>
+                <td><code>nt→</code></td>
+                <td>expect().not.toBeTruthy</td>
+            </tr>
+            <tr>
+                <td><code>nu→</code></td>
+                <td>expect().not.toBeUndefined</td>
+            </tr>
+            <tr>
+                <td><code>nc→</code></td>
+                <td>expect().not.toContain</td>
+            </tr>
+            <tr>
+                <td><code>ne→</code></td>
+                <td>expect().not.toEqual</td>
+            </tr>
+            <tr>
+                <td><code>nm→</code></td>
+                <td>expect().not.toMatch</td>
+            </tr>
+            <tr>
+                <td><code>nt→</code></td>
+                <td>expect().not.toThrow</td>
+            </tr>
+            <tr>
+                <td><code>any→</code></td>
+                <td>jasmine.any</td>
+            </tr>
+            <tr>
+                <td><code>oc→</code></td>
+                <td>jasmine.objectContaining</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<br>
+
+<h2 class="title is-5">Spies</h2>
+<br>
+<div class="container">
+    <table class="table is-narrow is-bordered">
+        <thead>
+            <tr>
+                <th>Trigger</th>
+                <th>Content</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>so→</code></td>
+                <td>spyOn</td>
+            </tr>
+            <tr>
+                <td><code>sct→</code></td>
+                <td>spyOn.and.callThrough</td>
+            </tr>
+            <tr>
+                <td><code>scf→</code></td>
+                <td>spyOn.and.callFake</td>
+            </tr>
+            <tr>
+                <td><code>spg→</code></td>
+                <td>spyOnProperty($obj,'$property', 'get')</td>
+            </tr>
+            <tr>
+                <td><code>sps→</code></td>
+                <td>spyOnProperty($obj,'$property', 'set')</td>
+            </tr>
+            <tr>
+                <td><code>srv→</code></td>
+                <td>spyOn.and.returnValue</td>
+            </tr>
+            <tr>
+                <td><code>ss→</code></td>
+                <td>spyOn.and.stub</td>
+            </tr>
+            <tr>
+                <td><code>ste→</code></td>
+                <td>spyOn.and.throwError</td>
+            </tr>
+            <tr>
+                <td><code>ca→</code></td>
+                <td>spy.calls.all</td>
+            </tr>
+            <tr>
+                <td><code>caa→</code></td>
+                <td>spy.calls.allArgs</td>
+            </tr>
+            <tr>
+                <td><code>ca→</code></td>
+                <td>spy.calls.any</td>
+            </tr>
+            <tr>
+                <td><code>caf→</code></td>
+                <td>spy.calls.argsFor</td>
+            </tr>
+            <tr>
+                <td><code>cc→</code></td>
+                <td>spy.calls.count</td>
+            </tr>
+            <tr>
+                <td><code>cf→</code></td>
+                <td>spy.calls.first</td>
+            </tr>
+            <tr>
+                <td><code>cmr→</code></td>
+                <td>spy.calls.mostRecent</td>
+            </tr>
+            <tr>
+                <td><code>cr→</code></td>
+                <td>spy.calls.reset</td>
+            </tr>
+            <tr>
+                <td><code>cs→</code></td>
+                <td>createSpy</td>
+            </tr>
+            <tr>
+                <td><code>cso→</code></td>
+                <td>createSpyObj</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+---
+categories: tutorials
+---
+_hidden: no
