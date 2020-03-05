@@ -8,13 +8,11 @@ image: /images/logo-flutter.png
 ---
 description:
 
+It is a little mobile application that communicates with two APIs.
 
-Una pequeña aplicación que se comunica con dos API. 
+One of the APIs is to get the [list of countries](https://restcountries.eu/).
 
-Un API es para obtener la [lista de paises](https://restcountries.eu/).
-
-El otro es para obtener las [banderas de esos paises](https://www.countryflags.io/).
-
+And the other one is to get the [flags of those countries](https://www.countryflags.io/).
 ---
 tags_lang: Dart:is-link
 ---

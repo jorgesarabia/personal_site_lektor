@@ -6,10 +6,7 @@ repository: https://github.com/jorgesarabia/PersonalSite
 ---
 image: /images/logo96x96.png
 ---
-description:
-
-Es el antigüo proyecto de mi página personal. Donde expongo algunos trabajos e información de contacto.
-Para desarrollarla, utilicé algunas herramientas como
+description: This is the old project on my personal page. Here I share some works and contact information.
 ---
 tags_lang: HTML:is-black, CSS:is-info, JavaScript:is-warning
 ---

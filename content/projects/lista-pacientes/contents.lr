@@ -1,4 +1,4 @@
-name: Lista de Pacientes
+name: Pacient List
 ---
 date: 2019-10-29 09:44:56
 ---
@@ -6,7 +6,7 @@ repository: https://github.com/jorgesarabia/lista_pacientes
 ---
 image: /images/logo-flutter.png
 ---
-description: Una app para listar el número de ficha de los pacientes de un consultorio
+description: This is a mobile application to list the record number of the patients in a doctor's office.
 ---
 tags_lang: Dart:is-link
 ---

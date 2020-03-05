@@ -6,9 +6,6 @@ repository: https://github.com/jorgesarabia/flutter_coverage
 ---
 image: /images/logo-bash.png
 ---
-description:
-
-Es un proyecto para automatizar algunas tareas al momento
-de realizar las pruebas unitarias en Flutter.
+description: This is a project to automate some task when you perform unit test in Flutter.
 ---
 tags_lang: Bash:is-black

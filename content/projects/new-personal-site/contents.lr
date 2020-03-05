@@ -8,10 +8,9 @@ image: /images/logo96x96.png
 ---
 description:
 
+This is the new project for my personal page. The template is based on the previous [project](https://github.com/jorgesarabia/PersonalSite).
+This time I added a Blog and used [Lektor](https://www.getlektor.com/) to manage the content.
 
-Es el nuevo proyecto de mi página personal, con un template basado en el anterior
-[proyecto](https://github.com/jorgesarabia/PersonalSite). Esta vez se agregó un Blog 
-y se utilizó [Lektor](https://www.getlektor.com/) para manejar el contenido.
 
 ---
 tags_lang: Python:is-warning, HTML:is-black, CSS:is-info, JavaScript:is-warning
